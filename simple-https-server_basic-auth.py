@@ -30,7 +30,7 @@
 #                   https://localhost:4443
 #
 
-
+import os
 import ssl
 import logging
 import http.server
@@ -107,6 +107,9 @@ if __name__ == '__main__':
     httpd = http.server.HTTPServer(('0.0.0.0', 4443), handler)
     httpd.socket = ssl.wrap_socket(httpd.socket, certfile='./server.pem', server_side=True)
     try:
+        if not os.path.isdir('./files'):
+            os.makedirs('./files')
+        os.chdir('./files')
         httpd.serve_forever()
     except Exception:
         logger.error("Fatal error in main loop", exc_info=True)
