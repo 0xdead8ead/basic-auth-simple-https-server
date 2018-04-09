@@ -1,6 +1,6 @@
 # Basic Auth Simple HTTPS Server
 
-Python SimpleHTTPServer over HTTPS using Basic Auth
+Python 3 SimpleHTTPServer over HTTPS using Basic Auth
 
 
 ### Get Lets Encrypt HTTPS Cert for Server:
