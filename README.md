@@ -2,6 +2,9 @@
 
 Python 3 SimpleHTTPServer over HTTPS using Basic Auth
 
+Uses Python 3 standard library. Creates ./files directory from which files can be served.
+Logging outputs to simple.log. Cert & Key file must be created prior to running.
+
 
 ### Get Lets Encrypt HTTPS Cert for Server:
 
